@@ -206,8 +206,8 @@ export function Attack_xelor_4(canvasX) {
 export function Attack_xelor_1_to_right(canvasX) {
 
     let x = width / 2;
-    let r = 40,
-        step = 0;
+    let r = 40;
+    let step = 0;
     
    
     let context = canvasX.getContext("2d");
@@ -353,6 +353,7 @@ export function Attack_xelor_4_to_right(canvasX) {
     
    
     let context = canvasX.getContext("2d");
+    // let context = canvasX.getContext("2d");
     
     canvasX.width = width * ratio;
     canvasX.height = height * ratio;

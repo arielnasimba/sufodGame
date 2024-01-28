@@ -1,61 +1,14 @@
-import * as ATT from "./all_attacks.js"
+import * as IOP from "./heroes_attacks/iop_attacks.js"
 import * as XEL from "./heroes_attacks/xelor_attacks.js"
 
-// let width = window.innerWidth,
-//     height = window.innerHeight,
-//     ratio = window.devicePixelRatio;
-
-
-// function attack_1() {
-
-//     let x = width / 2;
-//     let r = 40,
-//         step = 0;
-    
-//     let canvas_iop = document.querySelector("canvas#iop"),
-//         context = canvas_iop.getContext("2d");
-    
-//     canvas_iop.width = width * ratio;
-//     canvas_iop.height = height * ratio;
-//     canvas_iop.style.width = width + "px";
-//     canvas_iop.style.height = height + "px";
-//     context.scale(ratio, ratio);
-//     context.imageSmoothingEnable = false;
-    
-//     let sprites = new Image();
-//     // sprites.onload = animate;
-//     sprites.src = `./public/assets/characters/iop/attacks_/iop_sheet_sprite.png`;
-    
-//     function animate() {
-//         draw();
-//         update();
-//         requestAnimationFrame(animate);
-//     }
-    
-//     function draw() {
-//         context.clearRect(0 ,0 ,width, height);
-//         drawShell(x, height, Math.floor(step));
-//     }
-//     function drawShell(x,y, step) {
-//         context.drawImage(sprites, 297*step, 0, 297, 619, x -840, y - 650 ,  297,619 );
-//     }
-//     function update() {
-//         step+=0.070;
-//         if (step >= 7) {
-//             step -= 6;
-//         }
-//     }
-
-//     animate();
-// }
-
-
+let width = window.innerWidth,
+    height = window.innerHeight,
+    ratio = window.devicePixelRatio;
 
 /********* iop area end ***********/
 let body =  document.body;
  / -------------- test ---------- /
 
-console.log(body.querySelector("button#entry_game_btn"));
 body.querySelector("button#entry_game_btn").addEventListener("click", () => {
 
 dislay_choice()
@@ -68,7 +21,7 @@ body.querySelector("a#play_game_btn").addEventListener("click", () => {
 });
 
 
-play_game_btn
+
 // / --------Start game button -------- / 
 
 
@@ -129,7 +82,7 @@ function dislay_choice() {
 
   // XEL.Attack_xelor_1_to_right(document.querySelector("canvas#xelor_attack_rayon_obscur"));
   // XEL.Attack_xelor_2_to_right(document.querySelector("canvas#xelor_attack_vol_de_temps"));
-  XEL.Attack_xelor_3_to_right(document.querySelector("canvas#xelor_attack_paradox_right"));
+  // XEL.Attack_xelor_3_to_right(document.querySelector("canvas#xelor_attack_paradox_right"));
   console.log(body.querySelector("canvas#xelor_attack_paradox_right"));
   // XEL.Attack_xelor_4_to_right(document.querySelector("canvas#xelor_attack_aiguille"));
 
@@ -137,6 +90,7 @@ function dislay_choice() {
 
 
     /**********  test buttons spells start **********/  
+    console.log(document.querySelector("canvas#iop_attack_epee_celeste"));
 
     // iop side 
     console.log(body.querySelector(".spells"));
@@ -146,13 +100,17 @@ function dislay_choice() {
       //epee celeste attack
       if ((e.target).dataset.spell == 1) {
 
+        body.querySelector("#iop_p1").style.display = `none`;
+
+        body.querySelector(".iop_sheet").style.display = `flex`;
+
         document.querySelector("canvas#iop_attack_epee_celeste").style.display = "flex";
 
         document.querySelector("canvas#iop_attack_deus").style.display = "none";
         document.querySelector("canvas#iop_attack_cut").style.display = "none";
         document.querySelector("canvas#iop_attack_intimidation").style.display = "none";
 
-        ATT.Attack_3(document.querySelector("canvas#iop_attack_epee_celeste"));
+        IOP.Attack_3(document.querySelector("canvas#iop_attack_epee_celeste"));
         
         console.log("epee celeste attack");
       }
@@ -165,7 +123,7 @@ function dislay_choice() {
         document.querySelector("canvas#iop_attack_intimidation").style.display = "none";
 
 
-        ATT.Attack_2(document.querySelector("canvas#iop_attack_cut"));
+        IOP.Attack_2(document.querySelector("canvas#iop_attack_cut"));
         
         console.log("cut attack");
       }
@@ -179,7 +137,7 @@ function dislay_choice() {
 
 
         
-        ATT.Attack_1(document.querySelector("canvas#iop_attack_deus"));
+        IOP.Attack_1(document.querySelector("canvas#iop_attack_deus"));
         console.log("deus punition");
       }
       // intimidation attack
@@ -191,7 +149,7 @@ function dislay_choice() {
         document.querySelector("canvas#iop_attack_cut").style.display = "none";
 
 
-        ATT.Attack_4(document.querySelector("canvas#iop_attack_intimidation"));
+        IOP.Attack_4(document.querySelector("canvas#iop_attack_intimidation"));
         console.log("intimidation");
       }
       

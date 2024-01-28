@@ -309,6 +309,8 @@ a.btn_play{
     /* opacity: 0.5; */
 }
 
+
+/****** player one area start ***********/
 .player_one_area{
     /* top: 50%; */
     display: flex;
@@ -370,7 +372,7 @@ canvas#iop{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.512);
     cursor: pointer;
     transition: transform 0.5s ease-in-out;
-  }
+  } 
   
   .spell:hover {
     transform: scale(1.1);
@@ -471,6 +473,33 @@ canvas#iop{
 /**spell six end **/
 
 /***** list button area for gamer 1  end ******/
+
+
+/****** player one area end  ***********/
+
+/****** player two area end  ***********/
+
+
+.area_game .player_two_area{
+    /* background-color: green !important;  */
+    /* opacity: 0.2; */
+    width: 50%;
+    /* display: flex;
+    justify-content: center;
+    align-items: baseline; */
+
+    position: relative;
+}
+
+.area_game .player_two_area .standing_pos_heroe{
+    /* background-color: red; */
+    width: 20%;
+    height: 22%;
+    position: absolute;
+    top: 25%;
+}
+
+/****** player two area end  ***********/
 
 
 /************ area game part end ************/
