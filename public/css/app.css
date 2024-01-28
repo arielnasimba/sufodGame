@@ -1,0 +1,475 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+main{    
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/backgrounds/background\(1\).png");
+    background-repeat: no-repeat;
+    /* background-color: red; */
+    background-size: 100% 100%;
+    /* z-index: -1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/************ loading game part start ************/
+
+
+#loadingDiv {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1;
+  }
+/************ loading game part end  ************/
+
+
+/************ first page to begin game  start ************/
+.entry_game{
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/backgrounds/entry_game_2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.entry_game .logo_area{
+    /* background-color: red; */
+    width: 20%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.entry_game .logo_area .top{
+    /* background-color: red; */
+    width: 100%;
+    height: 80%;
+    background-image: url(../assets/backgrounds/btn/entry_game_btn.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.entry_game .logo_area .btn_area{
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40%;
+    height: 20%;
+}
+/******* button start Game *******/
+.css-button-shadow-border-sliding--green {
+    margin-left: 12%;
+    min-width: 130px;
+    height: 40px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 25px;
+    border: double;
+    background: rgb(212, 244, 0);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+   z-index: 1;
+  }
+
+  .css-button-shadow-border-sliding--green:after {
+    border-radius: 25px;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+    background-color: rgb(100, 120, 44);
+    right: 0;
+  }
+  .css-button-shadow-border-sliding--green:active {
+    top: 2px;
+  }
+
+/****** button start Game  end ******/
+
+
+#start_game{
+    height: 100%;
+    width: 100%;
+}
+
+
+/************ first page to begin game  end ************/
+
+
+
+
+/********************** choice of character area ********************/
+
+.character_choice{
+    /* background-image: url("../assets/backgrounds/choice_charac/xelor_bck/xelor_bck.jpg"); */
+    /* background-color: rgb(82, 70, 65); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: inline; */
+    position: relative;
+    
+}
+
+
+/*****/
+
+.character_choice > img{
+    /* background-color: red; */
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+}
+
+.choice_charac{
+    /* background-color: red; */
+
+    width: 62.8%;
+    height: 99%;
+    background-image: url("../assets/backgrounds/choice_charac/main_selection_area_no_bck_finalv3.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    z-index: 2;
+
+}
+
+.chara_area{
+    position: absolute;
+    bottom: 32%;
+    /* opacity: 0.2; */
+    /* background-color: red; */
+    width: 12%;
+    height: 21%;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.standing_pos_heroe {
+    position: absolute;
+    /* background-color: red; */
+    width: 22%;
+    height: 22%;
+    right: 38%;
+    bottom: 14%;
+}
+
+/***** xelor part standing *********/
+
+.chara_area:hover {
+    transform: scale(1.2) translateY(-10%);
+    transition: transform 0.3s ease;
+  }
+
+/***** xelor part standing *********/
+
+
+/*****  button play game start ***/
+.choice_charac .btn_area_playGame{
+    /* background-color: red; */
+    position: relative;
+    width: 20%;
+    height: 80%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+}
+
+/***** change player start ****/
+.triangle_right{
+    position: absolute;
+    box-shadow: -5px 0px 0px 0px rgba(247,144,48,1);
+
+    right: 26%;
+    bottom: 30.5%;
+	width: 0;
+	height: 0;
+	border-width: 45px 0 45px 56px;
+	border-color: transparent transparent transparent #F7571E;
+	border-style: solid;
+    box-shadow: #fc8222;
+
+}
+.triangle_right:active{
+    position: absolute;
+    transition: 0.4s;
+    transform: scale(0.9);
+}
+.triangle_left{
+    position: absolute;
+    box-shadow: -5px 0px 0px 0px rgba(247,144,48,1);
+    left: 26%;
+    bottom: 30.5%;
+	width: 0;
+	height: 0;
+    rotate: 180deg;
+	border-width: 45px 0 45px 56px;
+	border-color: transparent transparent transparent #F7571E;
+	border-style: solid;
+
+}
+
+.triangle_left:active{
+    position: absolute;
+    transition: 0.4s;
+    transform: scale(0.9);
+}
+/***** change player end ****/
+
+
+a.btn_play{
+    position: absolute;
+    
+    background-color: #fc8222;
+    color: #fff;
+    font-family: Trebuchet MS;
+    font-size: 18px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    padding: 15px 53px;
+    border: 0px solid #000;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0px 0px 10px 0px #2D2D2D;
+    text-shadow: 2px 2px 0px #573333;
+    bottom: 3px;
+   }
+   a.btn_play:hover{
+    background-color: #fc9357;
+   }
+   a.btn_play:active{
+    transform: scale(0.95);
+   }
+
+
+/*****  button play game end *****/
+
+/********************** choice of character area ********************/
+
+
+
+
+/************ area game part start ************/
+
+.area_game{
+    display: none ;
+    position: absolute;
+    top: 20%;
+    right: 16.5%;
+    width: 55%;
+    height: 65%;
+    
+    /* background-color: aqua; */
+    /* opacity: 0.5; */
+}
+
+.player_one_area{
+    /* top: 50%; */
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    /* background-color: red; */
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+canvas#iop{ 
+    /* background-color: aqua; */
+    z-index: 0;
+    width: 60%;
+    height: 60%;
+    padding: 0;
+    margin: 0;
+}
+
+/***** list button area for gamer 1  start ******/
+
+
+
+.area_game .player_one_area .list_btn_gamer1_area{
+    position: absolute;
+    left: -20%;
+    bottom: -12%;
+    /* background-color: aqua; */
+    /* display: flex; */
+    width: 300px;
+    height: 200px;
+
+}
+
+.spells {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    grid-template-rows: repeat(2, 1fr);
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(82, 78, 76);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+  
+  .spell {
+
+    /* background-color: #f2f2f2; */
+    
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.512);
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .spell:hover {
+    transform: scale(1.1);
+  }
+
+
+/**spell one start **/
+ /* top left */
+.spell:first-of-type {
+    background-color: unset;
+    border: unset;
+    border-radius: 7px;
+    /* background-color: red; */
+    background-image: url("../assets/characters/iop/attacks_/buttons_/concentration_btn.png") ;
+    background-size: 142% 142%;
+    background-position: 48% 35%;
+    background-repeat: no-repeat;
+}
+
+/**spell one end **/
+
+/**spell two start **/
+ /* top middle */
+ .spell:nth-of-type(2) {
+    background-color: unset;
+    border: unset;
+    border-radius: 7px;
+    /* background-color: red; */
+    background-image: url("../assets/characters/iop/attacks_/buttons_/cutted_btn.png") ;
+    background-size: 142% 142%;
+    background-position: 48% 35%;
+    background-repeat: no-repeat;
+}
+
+
+/**spell two end **/
+
+/**spell three start **/
+ /* top middle */
+ .spell:nth-of-type(3) {
+    background-color: unset;
+    border: unset;
+    border-radius: 7px;
+    background-color: rgba(36, 14, 14, 0.33);
+    box-shadow: #2D2D2D;
+    /* background-image: url("../assets/characters/iop/attacks_/buttons_/cutted_btn.png") ; */
+    background-size: 142% 142%;
+    background-position: 48% 35%;
+    background-repeat: no-repeat;
+}
+
+/**spell three end **/
+
+/**spell fourth start **/
+ /* bottom left */
+ .spell:nth-of-type(4) {
+    background-color: unset;
+    border: unset;
+    border-radius: 7px;
+    /* background-color: red; */
+    background-image: url("../assets/characters/iop/attacks_/buttons_/power_up_btn.png") ;
+    background-size: 142% 142%;
+    background-position: 48% 35%;
+    background-repeat: no-repeat;
+}
+
+/**spell fourth end **/
+
+/**spell five start **/
+ /* bottom left */
+ .spell:nth-of-type(5) {
+    background-color: unset;
+    border: unset;
+    border-radius: 7px;
+    /* background-color: red; */
+    background-image: url("../assets/characters/iop/attacks_/buttons_/deus_btn.png") ;
+    background-size: 142% 142%;
+    background-position: 48% 35%;
+    background-repeat: no-repeat;
+}
+
+/**spell five end **/
+
+/**spell six start **/
+ /* bottom left */
+ .spell:nth-of-type(6) {
+    background-color: unset;
+    border: unset;
+    border-radius: 7px;
+    background-color: rgba(36, 14, 14, 0.33);
+    /* background-image: url("../assets/characters/iop/attacks_/buttons_/deus_btn.png") ; */
+    background-size: 142% 142%;
+    background-position: 48% 35%;
+    background-repeat: no-repeat;
+}
+
+/**spell six end **/
+
+/***** list button area for gamer 1  end ******/
+
+
+/************ area game part end ************/

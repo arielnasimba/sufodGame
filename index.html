@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width, initial-scale=1.0">
+    <title>test sprite do</title>
+    <link rel=stylesheet href=./public/css/app.css>
+    <!-- <link rel=stylesheet href=./node_modules/@fortawesome/fontawesome-free/css/all.css> -->
+
+</head>
+<body>
+
+    <main>
+
+        <!-- entry game start  -->
+
+        <div class="entry_game">
+
+            <div class="logo_area"> 
+
+                <div class="top"></div>
+
+                <div class="btn_area">
+
+                    <button id="entry_game_btn" class="css-button css-button-shadow-border-sliding css-button-shadow-border-sliding--green" > START </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- entry game end  -->
+
+
+        <!-- display choice character start  -->
+
+
+        <div class="character_choice" style="display: none;">
+            <img src="./public/assets/backgrounds/choice_charac/xelor_bck/xelor_bck.jpg" data-index-number="1" alt="" srcset="">
+            <img src="./public/assets/backgrounds/choice_charac/iop_bck/iop_bck.jpg" data-index-number="2" style="width: 0;" srcset="">
+            <img src="./public/assets/backgrounds/choice_charac/eniripsa_bck/eniripsa_bck.jpg" data-index-number="3" style="width: 0;" srcset="">
+            <div class="choice_charac">
+                <div class="triangle_left"></div>
+                <div class="triangle_right" ></div>
+
+                <div class="chara_area" >
+                    <img src="./public/assets/characters/xelor/positions/xelor_standing.png" data-index-number="10" alt="" srcset="" id="xelor_standing">
+                    <img src="./public/assets/characters/iop/positions/iop_standing_.png" data-index-number="11" style="width: 0;" alt="" srcset="" id="iop_standing">
+
+                </div>
+
+                <div class="btn_area_playGame">
+
+                    <a id="play_game_btn" class="btn_play" >PLAY</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- display choice character start  -->
+
+
+        <!-- display area game start  -->
+
+        <div class="area_game" >
+
+            
+                    <div class="player_one_area">
+                        <div class="standing_pos_heroe">
+
+                            <!-- <img src="./public/assets/characters/iop/positions/iop_standing_top_right.png" alt="" srcset=""> -->
+                            
+                        </div>
+                        <div class="list_btn_gamer1_area">
+
+                            <div class="spells">
+                                <button class="spell" data-spell="1"></button>
+                                <button class="spell" data-spell="2"></button>
+                                <button class="spell" data-spell="3"></button>
+                                <button class="spell" data-spell="4"></button>
+                                <button class="spell" data-spell="5"></button>
+                                <button class="spell" data-spell="6"></button>
+                              </div>
+
+                        </div>
+            
+
+
+
+                        
+                        <canvas id="iop_attack_deus" style="display: none;"></canvas>
+                        <canvas id="iop_attack_cut" style="display: none;"></canvas>
+                        <canvas id="iop_attack_epee_celeste" style="display: none;"></canvas>
+                    </div>
+
+                    <div class="player_two_area">
+            
+                        <canvas id="xelor"></canvas>
+                    </div>
+
+
+        </div>
+
+        <!-- display area game start  -->
+
+
+
+    </main>
+
+
+
+    <!-- scripts for bootstrap and popper js to make functional -->
+    <!--<script src=./node_modules/@popperjs/core/dist/umd/popper.js></script> -->
+    <!--<script src=./node_modules/bootstrap/dist/js/bootstrap.js></script> -->
+
+    <div id="loadingDiv" style="display: none;">Loading...</div>
+
+    <script type="module" src=./public/js/main.js></script>
+    
+</body>
+</html>
