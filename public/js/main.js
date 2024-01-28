@@ -1,4 +1,5 @@
 import * as ATT from "./all_attacks.js"
+import * as XEL from "./heroes_attacks/xelor_attacks.js"
 
 // let width = window.innerWidth,
 //     height = window.innerHeight,
@@ -114,18 +115,30 @@ function dislay_choice() {
     let character = document.querySelector( `canvas#${name_hero}`);
 
   }
-  console.log(document.querySelector("canvas"));
 
-  // ATT.Attack_1(document.querySelector("canvas#iop_attack_deus"));
-  // ATT.Attack_2(document.querySelector("canvas#iop_attack_cut"));
-  // ATT.Attack_3(document.querySelector("canvas#iop_attack_epee_celeste"));
-  // ATT.iop_await(document.querySelector("canvas#iop"));
-  ATT.Attack_xelor_1(document.querySelector("canvas#xelor"));
+  //test xelor attack to left side start 
 
+  // ATT.Attack_xelor_1(document.querySelector("canvas#xelor_attack_rayon_obscur"));
+  // ATT.Attack_xelor_2(document.querySelector("canvas#xelor_attack_vol_de_temps"));
+  // ATT.Attack_xelor_3(document.querySelector("canvas#xelor_attack_paradox"));
+  // ATT.Attack_xelor_4(document.querySelector("canvas#xelor_attack_aiguille"));
+
+  //test xelor attack to left side end 
+
+  //test xelor attack to right side start 
+
+  // XEL.Attack_xelor_1_to_right(document.querySelector("canvas#xelor_attack_rayon_obscur"));
+  // XEL.Attack_xelor_2_to_right(document.querySelector("canvas#xelor_attack_vol_de_temps"));
+  XEL.Attack_xelor_3_to_right(document.querySelector("canvas#xelor_attack_paradox_right"));
+  console.log(body.querySelector("canvas#xelor_attack_paradox_right"));
+  // XEL.Attack_xelor_4_to_right(document.querySelector("canvas#xelor_attack_aiguille"));
+
+  //test xelor attack to right side end 
 
 
     /**********  test buttons spells start **********/  
 
+    // iop side 
     console.log(body.querySelector(".spells"));
     body.querySelector(".spells").addEventListener("click", (e) =>{
       console.log((e.target).dataset);
@@ -137,6 +150,8 @@ function dislay_choice() {
 
         document.querySelector("canvas#iop_attack_deus").style.display = "none";
         document.querySelector("canvas#iop_attack_cut").style.display = "none";
+        document.querySelector("canvas#iop_attack_intimidation").style.display = "none";
+
         ATT.Attack_3(document.querySelector("canvas#iop_attack_epee_celeste"));
         
         console.log("epee celeste attack");
@@ -147,6 +162,7 @@ function dislay_choice() {
 
         document.querySelector("canvas#iop_attack_epee_celeste").style.display = "none";
         document.querySelector("canvas#iop_attack_deus").style.display = "none";
+        document.querySelector("canvas#iop_attack_intimidation").style.display = "none";
 
 
         ATT.Attack_2(document.querySelector("canvas#iop_attack_cut"));
@@ -159,13 +175,31 @@ function dislay_choice() {
 
         document.querySelector("canvas#iop_attack_epee_celeste").style.display = "none";
         document.querySelector("canvas#iop_attack_cut").style.display = "none";
+        document.querySelector("canvas#iop_attack_intimidation").style.display = "none";
+
 
         
         ATT.Attack_1(document.querySelector("canvas#iop_attack_deus"));
         console.log("deus punition");
       }
+      // intimidation attack
+      else if ((e.target).dataset.spell == 4) {
+        document.querySelector("canvas#iop_attack_intimidation").style.display = "flex";
+
+        document.querySelector("canvas#iop_attack_deus").style.display = "none";
+        document.querySelector("canvas#iop_attack_epee_celeste").style.display = "none";
+        document.querySelector("canvas#iop_attack_cut").style.display = "none";
+
+
+        ATT.Attack_4(document.querySelector("canvas#iop_attack_intimidation"));
+        console.log("intimidation");
+      }
       
     })
+
+
+    // iop side end 
+    
 
     
     /**********  test buttons   spells end **********/

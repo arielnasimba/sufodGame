@@ -431,7 +431,8 @@ canvas#iop{
     border: unset;
     border-radius: 7px;
     /* background-color: red; */
-    background-image: url("../assets/characters/iop/attacks_/buttons_/power_up_btn.png") ;
+    background-image: url("../assets/characters/iop/attacks_/buttons_/intimidation_btn.png");
+    /* background-image: url("../assets/characters/iop/attacks_/buttons_/power_up_btn.png") ; */
     background-size: 142% 142%;
     background-position: 48% 35%;
     background-repeat: no-repeat;
