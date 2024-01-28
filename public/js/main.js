@@ -1,5 +1,6 @@
 import * as IOP from "./heroes_attacks/iop_attacks.js"
 import * as XEL from "./heroes_attacks/xelor_attacks.js"
+import * as IOP_ATT from "../js/display_attacks_heroes/iop_display.js"
 
 let width = window.innerWidth,
     height = window.innerHeight,
@@ -34,19 +35,11 @@ function dislay_choice() {
       // Hide the loading div
       document.getElementById("loadingDiv").style.display = "none";
   
-      // Your code here
       document.querySelector(".entry_game").style.display = "none";
-
 
       document.querySelector(".character_choice").style.display = "flex";
 
-    //   document.querySelector("canvas#iop").style.zIndex = '100';
-    //   document.querySelector("canvas#iop").style.zIndex = '100';
-    //   ATT.Attack_1();
-
-    //   attack_ultimate_iop(document.querySelector("canvas#iop"));
-      // ...
-    }, 200); // Delay of 5000 milliseconds (5 seconds)
+    }, 200); 
 
 
 
@@ -100,57 +93,24 @@ function dislay_choice() {
       //epee celeste attack
       if ((e.target).dataset.spell == 1) {
 
-        body.querySelector("#iop_p1").style.display = `none`;
+        IOP_ATT.epee_celeste(document.querySelector("canvas#iop_attack_epee_celeste"));
 
-        body.querySelector(".iop_sheet").style.display = `flex`;
-
-        document.querySelector("canvas#iop_attack_epee_celeste").style.display = "flex";
-
-        document.querySelector("canvas#iop_attack_deus").style.display = "none";
-        document.querySelector("canvas#iop_attack_cut").style.display = "none";
-        document.querySelector("canvas#iop_attack_intimidation").style.display = "none";
-
-        IOP.Attack_3(document.querySelector("canvas#iop_attack_epee_celeste"));
-        
-        console.log("epee celeste attack");
       }
       //cut  attack
       else if ((e.target).dataset.spell == 2) {
-        document.querySelector("canvas#iop_attack_cut").style.display = "flex";
 
-        document.querySelector("canvas#iop_attack_epee_celeste").style.display = "none";
-        document.querySelector("canvas#iop_attack_deus").style.display = "none";
-        document.querySelector("canvas#iop_attack_intimidation").style.display = "none";
+        IOP_ATT.cut(document.querySelector("canvas#iop_attack_cut"));
 
-
-        IOP.Attack_2(document.querySelector("canvas#iop_attack_cut"));
-        
-        console.log("cut attack");
       }
       //deus punition attack
       else if ((e.target).dataset.spell == 5) {
-        document.querySelector("canvas#iop_attack_deus").style.display = "flex";
+        IOP_ATT.deus(document.querySelector("canvas#iop_attack_deus"));
 
-        document.querySelector("canvas#iop_attack_epee_celeste").style.display = "none";
-        document.querySelector("canvas#iop_attack_cut").style.display = "none";
-        document.querySelector("canvas#iop_attack_intimidation").style.display = "none";
-
-
-        
-        IOP.Attack_1(document.querySelector("canvas#iop_attack_deus"));
-        console.log("deus punition");
       }
       // intimidation attack
       else if ((e.target).dataset.spell == 4) {
-        document.querySelector("canvas#iop_attack_intimidation").style.display = "flex";
 
-        document.querySelector("canvas#iop_attack_deus").style.display = "none";
-        document.querySelector("canvas#iop_attack_epee_celeste").style.display = "none";
-        document.querySelector("canvas#iop_attack_cut").style.display = "none";
-
-
-        IOP.Attack_4(document.querySelector("canvas#iop_attack_intimidation"));
-        console.log("intimidation");
+        IOP_ATT.intimidation(document.querySelector("canvas#iop_attack_intimidation"));
       }
       
     })
