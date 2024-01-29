@@ -291,7 +291,22 @@ a.btn_play{
 /*****  button play game end *****/
 
 /********************** choice of character area ********************/
+/* .character_choice .slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .character_choice .slides img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
 
+/********************** choice of character area end ********************/
 
 
 
@@ -322,13 +337,22 @@ a.btn_play{
     position: relative;
 }
 
-canvas#iop{ 
+canvas{ 
     /* background-color: aqua; */
-    z-index: 0;
-    width: 60%;
-    height: 60%;
+    /* opacity: 0.2; */
+    width: 100vw;
+    height: 100%;
     padding: 0;
     margin: 0;
+
+    position: absolute;
+    top: -32%;
+    left: -104%;
+
+}
+
+.player_one_area .standing_pos_heroe{
+    /* background-color: green; */
 }
 
 /***** list button area for gamer 1  start ******/

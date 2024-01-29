@@ -2,6 +2,8 @@ import * as IOP from "./heroes_attacks/iop_attacks.js"
 import * as XEL from "./heroes_attacks/xelor_attacks.js"
 import * as IOP_ATT from "../js/display_attacks_heroes/iop_display.js"
 
+import {IOP_PLAYER, XELOR_PLAYER} from "../js/instances.js"
+
 let width = window.innerWidth,
     height = window.innerHeight,
     ratio = window.devicePixelRatio;
@@ -83,41 +85,38 @@ function dislay_choice() {
 
 
     /**********  test buttons spells start **********/  
-    console.log(document.querySelector("canvas#iop_attack_epee_celeste"));
+
 
     // iop side 
-    console.log(body.querySelector(".spells"));
-    body.querySelector(".spells").addEventListener("click", (e) =>{
-      console.log((e.target).dataset);
-
-      //epee celeste attack
-      if ((e.target).dataset.spell == 1) {
-
-        IOP_ATT.epee_celeste(document.querySelector("canvas#iop_attack_epee_celeste"));
-
-      }
-      //cut  attack
-      else if ((e.target).dataset.spell == 2) {
-
-        IOP_ATT.cut(document.querySelector("canvas#iop_attack_cut"));
-
-      }
-      //deus punition attack
-      else if ((e.target).dataset.spell == 5) {
-        IOP_ATT.deus(document.querySelector("canvas#iop_attack_deus"));
-
-      }
-      // intimidation attack
-      else if ((e.target).dataset.spell == 4) {
-
-        IOP_ATT.intimidation(document.querySelector("canvas#iop_attack_intimidation"));
-      }
-      
-    })
 
 
-    // iop side end 
-    
+console.log(IOP_PLAYER);
+console.log(XELOR_PLAYER);
+
+
+body.querySelectorAll(".spell").forEach(button => {
+  button.addEventListener("click", handleButtonClick);
+});
+
+
+function handleButtonClick(e) {
+  // Désactivez tous les événements "click" sur les boutons
+  let  buttons = document.querySelectorAll(".spell");
+  buttons.forEach(button => button.removeEventListener("click", handleButtonClick));
+
+  // Votre code pour lancer l'attaque en fonction du bouton cliqué
+  if (e.target.dataset.spell == 1) {
+    IOP_ATT.epee_celeste(document.querySelector("canvas#iop_attack_epee_celeste"));
+  } else if (e.target.dataset.spell == 2) {
+    IOP_ATT.cut(document.querySelector("canvas#iop_attack_cut"));
+  } else if (e.target.dataset.spell == 5) {
+    IOP_ATT.deus(document.querySelector("canvas#iop_attack_deus"));
+  } else if (e.target.dataset.spell == 4) {
+    IOP_ATT.intimidation(document.querySelector("canvas#iop_attack_intimidation"));
+  }
+}
+
+
 
     
     /**********  test buttons   spells end **********/
@@ -167,5 +166,33 @@ function dislay_choice() {
   })
 
   //****test caroussel  */
-
+  // let slideIndex = 1;
+  // showSlides(slideIndex);
+  
+  // function plusSlides(n) {
+  //   showSlides(slideIndex += n);
+  // }
+  
+  // function currentSlide(n) {
+  //   showSlides(slideIndex = n);
+  // }
+  
+  // function showSlides(n) {
+  //   let i;
+  //   let slides = document.getElementsByClassName("mySlides");
+  //   if (n > slides.length) {slideIndex = 1}    
+  //   if (n < 1) {slideIndex = slides.length}
+  //   for (i = 0; i < slides.length; i++) {
+  //     slides[i].style.display = "none";  
+  //   }
+  //   slides[slideIndex-1].style.display = "block";  
+  // }
+  
+  // document.querySelector(".triangle_right").addEventListener("click", () => {
+  //   plusSlides(1);
+  // });
+  
+  // document.querySelector(".triangle_left").addEventListener("click", () => {
+  //   plusSlides(-1);
+  // });
   
